@@ -1,0 +1,259 @@
+* {
+    border: 0px dashed gray;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Century Gothic Light';
+}
+
+body {
+    color: gray;
+}
+
+
+
+
+
+/* Body Tags */
+
+header {
+    text-align: left;
+}
+
+nav {
+    font-size: 1.5rem;
+}
+
+main {
+    text-align: center;
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2rem;
+    background-color: lightgray;
+    color: white;
+
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+/* Text Tags */
+
+
+h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 2rem;
+}
+
+
+
+p {
+    margin: 0;
+    padding: 1rem;
+}
+
+nav a {
+    color: gray;
+    text-decoration: none;
+    padding: 0 1rem 0 1rem;
+
+}
+
+
+
+
+
+
+
+/* IDs */
+
+
+
+#grid {
+    display: grid;
+    position: relative;
+    grid-template-areas:
+        "left items items right"
+        "quote1 quote1 quote1 quote1";
+
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+    grid-gap: 2rem 0rem;
+    width: 100;
+    min-width: 30rem;
+    margin: auto;
+    justify-items: stretch;
+    /* Below dosent work for some reason? Could need an external div for it to position into? */
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+
+#quote1 {
+    grid-area: quote1;
+    background: lightblue;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+}
+
+#quote1 h2 {
+    font-size: 2rem;
+    color: white;
+    font-style: italic;
+    font-weight: 200;
+    padding: 7rem 3rem 3rem 3rem;
+
+}
+
+#colorMode {
+    position: fixed;
+    bottom: 4rem;
+    left: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border: lightgray solid 2px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 10;
+    font-size: 1.5rem;
+    color: lightgray;
+}
+
+#colorMode:hover {
+    background-color: white;
+    color: black;
+    border: black solid 2px;
+}
+
+.topFlexboxContainer {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: center;
+    padding: 4rem 0 1rem 0;
+    border-bottom: 1.5px solid gray;
+
+
+
+}
+
+.topFlexbox {
+    height: 6rem;
+    margin: 0rem;
+    text-align: center;
+    line-height: 3rem;
+    ;
+
+
+}
+
+
+
+.flexboxContainer {
+    grid-area: items;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-content: start;
+    padding: 4rem 0 2rem 0;
+
+}
+
+.flexbox {
+    width: 15rem;
+    height: 20rem;
+    border: 1px dashed gray;
+    margin: 0.5rem;
+    color: white;
+}
+
+
+
+.titleColor {
+    color: gray;
+}
+
+
+
+.flexbox:hover {
+    border: 2px solid black;
+    height: 25rem;
+    transition: 0.5s;
+    color: gray;
+}
+
+
+.project1 {
+    background-image: url(./Project1Background.jpg);
+    background-size: cover;
+
+}
+
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    #grid {
+
+        grid-template-areas:
+            "items"
+            "quote1";
+        grid-template-columns: 1fr;
+        grid-gap: 2rem 0rem;
+        width: 100%;
+        min-width: 0rem;
+
+
+    }
+
+    .flexbox {
+        width: 12rem;
+        height: 15rem;
+        border: 1px dashed gray;
+        margin: 0.5rem;
+        color: white;
+    }
+}

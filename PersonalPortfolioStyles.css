@@ -15,6 +15,27 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Body Tags */
 
 header {
@@ -59,6 +80,21 @@ footer p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Text Tags */
 
 
@@ -75,7 +111,6 @@ h2 {
 }
 
 
-
 p {
     margin: 0;
     padding: 1rem;
@@ -87,6 +122,16 @@ nav a {
     padding: 0 1rem 0 1rem;
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -156,6 +201,24 @@ nav a {
     border: black solid 2px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Classes */
+
+
 .topFlexboxContainer {
     display: flex;
     height: auto;
@@ -167,8 +230,6 @@ nav a {
     padding: 4rem 0 1rem 0;
     border-bottom: 1.5px solid gray;
 
-
-
 }
 
 .topFlexbox {
@@ -176,12 +237,8 @@ nav a {
     margin: 0rem;
     text-align: center;
     line-height: 3rem;
-    ;
-
 
 }
-
-
 
 .flexboxContainer {
     grid-area: items;
@@ -224,6 +281,19 @@ nav a {
     background-size: cover;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

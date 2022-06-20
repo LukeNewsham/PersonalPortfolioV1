@@ -119,10 +119,16 @@ p {
 nav a {
     color: gray;
     text-decoration: none;
-    padding: 0 1rem 0 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 1rem;
 
 }
 
+nav a:hover {
+    background-color: lightgray;
+    color: white;    
+    transition: 0.2s;
+}
 
 
 
@@ -174,7 +180,8 @@ nav a {
     background: lightblue;
     position: relative;
     width: 100%;
-    height: 20rem;
+    height: auto;
+    padding: 3rem 0rem 3rem 0rem;
 }
 
 #quote1 h2 {
@@ -182,7 +189,15 @@ nav a {
     color: white;
     font-style: italic;
     font-weight: 200;
-    padding: 7rem 3rem 3rem 3rem;
+
+}
+
+#quote1 p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 200;
+    line-height: 1.8rem;
+    padding: 0 3rem 0 3rem;
 
 }
 
@@ -208,8 +223,12 @@ nav a {
 
 
 
-
-
+#welcomeSelfie {
+    width: 40%;
+    min-width: 300px;
+    border-radius: 2rem;
+    box-shadow: 0rem 0rem 1rem 0.5rem lightgray;
+}
 
 
 
@@ -264,28 +283,32 @@ nav a {
 
 }
 
-.flexbox {
+.flexboxProjects {
     width: 15rem;
     height: 20rem;
     border: 1px dashed gray;
     margin: 0.5rem;
-    color: white;
+}
+
+        .flexboxProjects:hover {
+            border: 1px solid black;
+            height: 25rem;
+            transition: 0.3s;
+            background-color: lightblue;
+            color: white;
+            font-size: 110%;
+
+           
+        }
+
+
+.flexbox {
+    width: 40%;  
 }
 
 
 
-.titleColor {
-    color: gray;
-}
 
-
-
-.flexbox:hover {
-    border: 2px solid black;
-    height: 25rem;
-    transition: 0.5s;
-    color: gray;
-}
 
 
 .project1 {
@@ -338,11 +361,19 @@ nav a {
 
     }
 
-    .flexbox {
+    .flexboxProjects {
         width: 12rem;
         height: 15rem;
         border: 1px dashed gray;
         margin: 0.5rem;
         color: white;
+    }
+
+    .flexbox {
+        width: 70%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 }

@@ -159,6 +159,7 @@ nav a:hover {
     position: relative;
     grid-template-areas:
         "left items items right"
+        "left projectsExpanded projectsExpanded right"
         "quote1 quote1 quote1 quote1";
 
     grid-template-rows: auto auto;
@@ -232,9 +233,16 @@ nav a:hover {
 
 
 
+#projectsExpanded {
+    grid-area: projectsExpanded;
+}
 
-
-
+#project1Button {
+    margin: 5rem 5rem 5rem 5rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
 
 
 
@@ -259,7 +267,7 @@ nav a:hover {
     flex-flow: row wrap;
     align-content: center;
     padding: 4rem 0 1rem 0;
-    border-bottom: 1.5px solid gray;
+    background-color: rgb(236, 236, 236);
 
 }
 
@@ -285,19 +293,32 @@ nav a:hover {
 
 .flexboxProjects {
     width: 15rem;
-    height: 20rem;
-    border: 1px dashed gray;
-    margin: 0.5rem;
+    height: 10rem;
+    border: 0px dashed gray;
+    margin: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0.5rem 0.5rem 1rem 0.2rem lightgray;
+    
+    
 }
 
         .flexboxProjects:hover {
-            border: 1px solid black;
-            height: 25rem;
-            transition: 0.3s;
+            
+            
             background-color: lightblue;
             color: white;
             font-size: 110%;
+           
+        }
 
+        .flexboxProjects:active {     
+            
+            
+            background-color: darkblue;
+            color: white;
+            font-size: 110%;
+            padding: 3rem 0rem 0 3rem;
+            box-shadow: 0rem 0rem 0rem 0rem
            
         }
 
@@ -314,11 +335,16 @@ nav a:hover {
 .project1 {
     background-image: url(./Project1Background.jpg);
     background-size: cover;
+    background-color: white;
 
 }
 
 
-
+.numberBox {
+    border: 1px solid black;
+    width: 3rem;
+    height: 1.5rem;
+}
 
 
 
@@ -352,26 +378,23 @@ nav a:hover {
 
         grid-template-areas:
             "items"
+            "projectsExpanded"
             "quote1";
         grid-template-columns: 1fr;
         grid-gap: 2rem 0rem;
-        width: 100%;
+        width: 80%;
         min-width: 0rem;
 
 
     }
 
     .flexboxProjects {
-        width: 12rem;
-        height: 15rem;
-        border: 1px dashed gray;
-        margin: 0.5rem;
-        color: white;
+        width: 8rem;
+        height: 8rem;
+        margin: 2rem 0 0 0;
     }
 
-    .flexbox {
-        width: 70%;
-    }
+   
 
     h2 {
         font-size: 1.5rem;

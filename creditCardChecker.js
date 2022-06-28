@@ -1,39 +1,21 @@
 
-checkButton = document.getElementById('project1Button')
+let checkButton = document.getElementById('project1Button');
+let numberBoxString = document.getElementById('numberBoxField');
+
+//numberBoxString.value.split('').map(Number);
 
 
-function validateCred() {
-
-
-
-    let stringArray = [];
-    stringArray.push(document.getElementById('creditCardNumber1').value)
-    stringArray.push(document.getElementById('creditCardNumber2').value)
-    stringArray.push(document.getElementById('creditCardNumber3').value)
-    stringArray.push(document.getElementById('creditCardNumber4').value)
-    stringArray.push(document.getElementById('creditCardNumber5').value)
-    stringArray.push(document.getElementById('creditCardNumber6').value)
-    stringArray.push(document.getElementById('creditCardNumber7').value)
-    stringArray.push(document.getElementById('creditCardNumber8').value)
-    stringArray.push(document.getElementById('creditCardNumber9').value)
-    stringArray.push(document.getElementById('creditCardNumber10').value)
-    stringArray.push(document.getElementById('creditCardNumber11').value)
-    stringArray.push(document.getElementById('creditCardNumber12').value)
-    stringArray.push(document.getElementById('creditCardNumber13').value)
-    stringArray.push(document.getElementById('creditCardNumber14').value)
-    stringArray.push(document.getElementById('creditCardNumber15').value)
-    stringArray.push(document.getElementById('creditCardNumber16').value)
-
-    console.log(stringArray)
-
+function validateCred() {  
 
     let array = [];
-    stringArray.forEach(num => {
-        array.push(parseInt(num, 10))
-    })
-    
-    console.log(array)
 
+    let numberBoxNumbers = `${numberBoxString.value}`.split('').map(Number);
+    
+    numberBoxNumbers.forEach(num => {
+      array.push(num)
+    })
+
+        console.log(array.length)
 
     //new array to be added together to 100 at the end   
     let total = 0;
@@ -55,21 +37,31 @@ function validateCred() {
         //adds new element to total          
         total += newElement;  
       } 
-  
-    }  
-    
-    console.log(total)
+
+      console.log(total)
     let modulo = total%10;
-    document.getElementById('descriptions').innerHTML = modulo;
+    
+    if (modulo == 0) {
+      document.getElementById('projectAnswer').innerHTML = 'VERIFIED: Modulo is 0'
+    } else {
+      document.getElementById('projectAnswer').innerHTML = `NOT VERIFIED: modulo is ${modulo}`;
+    }
+  
+    }  else {
+      document.getElementById('projectAnswer').innerHTML = 'Please input 16 digits'
+    }
+    
+    
+    
 
     
-  }
+}
   
 
+checkButton.onclick = validateCred;
 
 
-
-  /*
+/*
   
   function idInvalidCardCompanies(cards) {
     let companies = [];
@@ -113,7 +105,7 @@ function validateCred() {
     return idInvalidCardCompanies(invalidCards)
   }
   
- 
+ */
   
   //findInvalidCards(batch)
 

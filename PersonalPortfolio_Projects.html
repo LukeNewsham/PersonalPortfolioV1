@@ -13,22 +13,22 @@
 <body>
 
     
-    <div class="topFlexboxContainer">
+    <div id="topFlexboxContainer">
 
         <header class="topFlexbox">
             <h1> Luke Newsham Portfolio </h1>
         </header>
 
-        <nav class="topFlexbox">
+        <nav class="topFlexbox ">
 
             <a href ="./PersonalPortfolio.html" ><strong>Home</strong></a>
-            <a href ="./PersonalPortfolio_Projects.html" ><strong>Projects</strong></a>
+            <a href ="./PersonalPortfolio_Projects.html" class="currentLink" ><strong>Projects</strong></a>
             <a href ="./PersonalPortfolio_About Me.html" ><strong>About me</strong></a>
             
 
         </nav>
 
-        <button id="colorMode"> M </button>
+        <button id="colourModeButton"> M </button>
 
     </div>
 
@@ -36,22 +36,20 @@
 
 
 
-    <main id="grid">
+    <main id="grid" >
 
 
         <div id="projects" class="flexboxContainer">
             <div class="flexboxProjects" id="project1">
-                <h3 class="titleColor" > Credit Card Checker </h3>
+                <h3> Credit Card Checker </h3>
             </div>
             <div class="flexboxProjects" id="project2">
-                <h3 class="titleColor"> Project 2 </h3>
+                <h3> Mysterious Organisms </h3>
             </div>
             <div class="flexboxProjects" id="project3">
-                <h3 class="titleColor"> Project 3 </h3>
+                <h3> Maintenance Calculator </h3>
             </div>
-            <div class="flexboxProjects" id="project4">
-                <h3 class="titleColor"> Project 4 </h3>
-            </div>
+          
             
         </div>
 
@@ -60,25 +58,50 @@
             <p id="descriptions"> 
                - Press project for more details - 
             </p>
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber1"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber2"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber3"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber4"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber5"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber6"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber7"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber8"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber9"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber10"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber11"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber12"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber13"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber14"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber15"> 
-            <input type="number" name="creditCardNumber" class = "numberBox" id="creditCardNumber16">
             <br>
+            <div id="project1Info">
+                <input type="text" name="creditCardNumberText" class = "numberBox" maxlength = "16" minlength = "16" id="numberBoxField" value=""> 
+                <button id="project1Button" class="answerButton"> Check Answer </button> 
+            </div>
+            <div id="project2Info">
 
-            <button id="project1Button"> Check Answer </button> 
+            </div>
+            <div id="project3Info">
+                <form>
+                    <table>
+                        <caption> Details                        
+                        <tr >
+                            <th> 
+                                Sex <input list="sexOptions" name="sex" id="sexField" placeholder="Please select" >
+                                        <datalist id="sexOptions">
+                                            <option value="Male">
+                                            <option value="Female">				
+                                        </datalist> 
+                            </th>
+                            <th> 
+                                Age <input type="number" name="age" id="ageField" min="18" max="100" size="3" placeholder="18+" > 
+                            </th>
+                        </tr>
+                        
+                        <tr>				
+                            <td>
+                                Weight <input type="number" name="weight" id="weightField"  min="0" max="300" size="3" placeholder="KG"  >
+                            </td>
+                            <td> 
+                                Height <input type="number" name="height" id="heightField"  min="0" max="300" size="3" placeholder="cm" >
+                            </td>					
+                        </tr>                        
+                    </table>                  
+                    <input type="Reset" value="Clear">                    
+                </form>
+                <button id="project2Button" class="answerButton"> Check Answer </button>
+            </div>
+            
+            <br>
+            <p id="projectAnswer">                 
+            </p>
+
+            
         </div>
 
         
@@ -95,6 +118,8 @@
 
     <script src="./PersonalPortfolio_Projects_Listeners.js"> </script>
     <script src="./creditCardChecker.js"> </script>
+    <script src="./maintenanceCalculator.js"> </script>
+    
 </body>
 
 </html>

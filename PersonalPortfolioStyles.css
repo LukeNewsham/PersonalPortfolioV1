@@ -5,11 +5,10 @@
 html {
     font-size: 14px;
     font-family: 'Century Gothic Light';
+    
 }
 
-body {
-    color: gray;
-}
+
 
 
 
@@ -117,10 +116,10 @@ p {
 }
 
 nav a {
-    color: gray;
     text-decoration: none;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 1rem;
+    color: black;
 
 }
 
@@ -132,6 +131,12 @@ nav a:hover {
 
 
 
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
@@ -153,6 +158,18 @@ nav a:hover {
 /* IDs */
 
 
+#topFlexboxContainer {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: center;
+    padding: 4rem 0 1rem 0;
+    background-color: rgb(236, 236, 236);
+
+}
 
 #grid {
     display: grid;
@@ -174,6 +191,7 @@ nav a:hover {
     align-items: stretch;
     align-content: stretch;
 }
+
 
 
 #quote1 {
@@ -202,7 +220,7 @@ nav a:hover {
 
 }
 
-#colorMode {
+#colourModeButton {
     position: fixed;
     bottom: 4rem;
     left: 2rem;
@@ -216,7 +234,7 @@ nav a:hover {
     color: lightgray;
 }
 
-#colorMode:hover {
+#colourMode:hover {
     background-color: white;
     color: black;
     border: black solid 2px;
@@ -237,15 +255,36 @@ nav a:hover {
     grid-area: projectsExpanded;
 }
 
-#project1Button {
-    margin: 5rem 5rem 5rem 5rem;
-    width: 10rem;
-    height: 3rem;
-    border-radius: 1rem;
+
+
+
+#project1Info {
+    display: none;
+    
+}
+#project2Info {
+    display: none;
+    
+}
+#project3Info {
+    display: none;
+    
+}
+
+#projectAnswer {
+    display: none;
+    font-size: 1.2rem;
+    
 }
 
 
-
+#projectsExpanded {
+    background-color: rgb(243, 243, 243);
+    padding: 4rem;    
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    margin: 2rem;
+}
 
 
 
@@ -258,18 +297,6 @@ nav a:hover {
 /* Classes */
 
 
-.topFlexboxContainer {
-    display: flex;
-    height: auto;
-    width: auto;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
-    align-content: center;
-    padding: 4rem 0 1rem 0;
-    background-color: rgb(236, 236, 236);
-
-}
 
 .topFlexbox {
     height: 6rem;
@@ -292,35 +319,16 @@ nav a:hover {
 }
 
 .flexboxProjects {
-    width: 15rem;
-    height: 10rem;
+    width: 20rem;
+    height: 6rem;
     border: 0px dashed gray;
-    margin: 2rem;
     border-radius: 2rem;
     box-shadow: 0.5rem 0.5rem 1rem 0.2rem lightgray;
+    margin: 2rem;
+    padding-top: 2rem;
     
     
 }
-
-        .flexboxProjects:hover {
-            
-            
-            background-color: lightblue;
-            color: white;
-            font-size: 110%;
-           
-        }
-
-        .flexboxProjects:active {     
-            
-            
-            background-color: darkblue;
-            color: white;
-            font-size: 110%;
-            padding: 3rem 0rem 0 3rem;
-            box-shadow: 0rem 0rem 0rem 0rem
-           
-        }
 
 
 .flexbox {
@@ -331,29 +339,30 @@ nav a:hover {
 
 
 
-
-.project1 {
-    background-image: url(./Project1Background.jpg);
-    background-size: cover;
-    background-color: white;
-
-}
-
-
 .numberBox {
     border: 1px solid black;
-    width: 3rem;
-    height: 1.5rem;
+    width: 30rem;
+    height: 3rem;
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    text-align: center;
+    border: none;
+   
 }
 
 
 
+.answerButton {
+    margin: 5rem 5rem 5rem 5rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background-color: lightblue;
+}
 
-
-
-
-
-
+.currentLink {
+    border: 2px grey solid;
+}
 
 
 
@@ -398,5 +407,15 @@ nav a:hover {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .numberBox {
+        border: 1px solid black;
+        width: 20rem;
+        height: 3rem;
+        font-size: 1rem;
+        letter-spacing: 0.7rem;
+        text-align: center;
+        
     }
 }

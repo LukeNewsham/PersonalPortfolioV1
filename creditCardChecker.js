@@ -1,6 +1,7 @@
 
 let checkButton = document.getElementById('project1Button');
 let numberBoxString = document.getElementById('numberBoxField');
+let projectAnswerCC = document.getElementById('projectAnswer');
 
 //numberBoxString.value.split('').map(Number);
 
@@ -40,6 +41,8 @@ function validateCred() {
 
       console.log(total)
     let modulo = total%10;
+
+    projectAnswerCC.style.border = '0px solid red';
     
     if (modulo == 0) {
       document.getElementById('projectAnswer').innerHTML = 'VERIFIED: Modulo is 0'
@@ -49,6 +52,8 @@ function validateCred() {
   
     }  else {
       document.getElementById('projectAnswer').innerHTML = 'Please input 16 digits'
+      projectAnswerCC.style.border = '2px solid red';
+      projectAnswerCC.innerHTML = "Please fill in all fields";
     }
     
     

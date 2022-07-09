@@ -5,7 +5,6 @@
 html {
     font-size: 14px;
     font-family: 'Century Gothic Light';
-    
 }
 
 
@@ -47,8 +46,6 @@ nav {
 
 main {
     text-align: center;
-
-
 }
 
 body {
@@ -136,10 +133,21 @@ nav a:hover {
 table {
     margin-left: auto;
     margin-right: auto;
+    text-align: right;
 }
 
 
+form input {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 0 0 0 20px;
+}
 
+td {
+    padding: 10px;
+
+}
 
 
 
@@ -201,6 +209,7 @@ table {
     width: 100%;
     height: auto;
     padding: 3rem 0rem 3rem 0rem;
+    margin: 5rem 0 0 0;
 }
 
 #quote1 h2 {
@@ -242,12 +251,18 @@ table {
 
 
 
-#welcomeSelfie {
+#welcomeSelfieFlexbox {
     width: 40%;
-    min-width: 300px;
     border-radius: 2rem;
     box-shadow: 0rem 0rem 1rem 0.5rem lightgray;
+    object-fit: cover;
 }
+
+#welcomeMessageFlexbox {
+    width: 40%;
+    text-align: left;
+}
+
 
 
 
@@ -274,16 +289,21 @@ table {
 #projectAnswer {
     display: none;
     font-size: 1.2rem;
-    
+    margin: 4rem;
+    border-radius: 10px;
+    font-weight: bolder;
 }
+
+
+
 
 
 #projectsExpanded {
     background-color: rgb(243, 243, 243);
-    padding: 4rem;    
+    padding: 2.5rem;
     border-radius: 3rem;
     font-size: 1.2rem;
-    margin: 2rem;
+    margin: 4rem;
 }
 
 
@@ -313,27 +333,21 @@ table {
     width: 100%;
     justify-content: space-around;
     flex-flow: row wrap;
-    align-content: start;
+    /* align-content: start; */
     padding: 4rem 0 2rem 0;
-
 }
 
 .flexboxProjects {
-    width: 20rem;
-    height: 6rem;
+    flex-grow: 1;
+    min-width: 220px;
+    max-width: 300px;
     border: 0px dashed gray;
     border-radius: 2rem;
     box-shadow: 0.5rem 0.5rem 1rem 0.2rem lightgray;
     margin: 2rem;
     padding-top: 2rem;
-    
-    
 }
 
-
-.flexbox {
-    width: 40%;  
-}
 
 
 
@@ -353,11 +367,23 @@ table {
 
 
 .answerButton {
-    margin: 5rem 5rem 5rem 5rem;
+    margin: 0.5rem;
     width: 10rem;
-    height: 3rem;
+    height: 2rem;
     border-radius: 1rem;
     background-color: lightblue;
+    color: white;
+    font-weight: bolder;
+}
+
+.resetButton {
+    margin: 0.5rem;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: darkgrey;
+    color: white;
+    font-weight: bolder;
 }
 
 .currentLink {
@@ -377,10 +403,24 @@ table {
 
 /* Media Queries */
 
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (max-width: 800px) {
+   
 
     a {
         font-size: 1.5rem;
+    }
+
+    #welcomeSelfieFlexbox {
+        min-width: 0px;
+        width: 70%;
+    }
+    
+    #welcomeMessageFlexbox {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
     }
 
     #grid {
@@ -391,20 +431,20 @@ table {
             "quote1";
         grid-template-columns: 1fr;
         grid-gap: 2rem 0rem;
-        width: 80%;
         min-width: 0rem;
 
 
     }
 
-    .flexboxProjects {
-        width: 8rem;
-        height: 8rem;
-        margin: 2rem 0 0 0;
+    #projectsExpanded {
+        background-color: rgb(243, 243, 243);
+        padding: 4rem;
+        border-radius: 0rem;
+        font-size: 1.2rem;
+        margin: 5rem 0 0 0;
     }
 
    
-
     h2 {
         font-size: 1.5rem;
     }

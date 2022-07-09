@@ -21,7 +21,7 @@
 
         <nav class="topFlexbox ">
 
-            <a href ="./PersonalPortfolio.html" ><strong>Home</strong></a>
+            <a href ="./index.html" ><strong>Home</strong></a>
             <a href ="./PersonalPortfolio_Projects.html" class="currentLink" ><strong>Projects</strong></a>
             <a href ="./PersonalPortfolio_About Me.html" ><strong>About me</strong></a>
             
@@ -56,7 +56,7 @@
         <div id="projectsExpanded" >
             
             <p id="descriptions"> 
-               - Press project for more details - 
+                Select a project
             </p>
             <br>
             <div id="project1Info">
@@ -67,39 +67,51 @@
 
             </div>
             <div id="project3Info">
+                <h3> Please enter your details below</h2>
                 <form>
                     <table>
-                        <caption> Details                        
-                        <tr >
-                            <th> 
+                                          
+                        <tr>
+                            <td> 
                                 Sex <input list="sexOptions" name="sex" id="sexField" placeholder="Please select" >
                                         <datalist id="sexOptions">
                                             <option value="Male">
                                             <option value="Female">				
                                         </datalist> 
-                            </th>
-                            <th> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
                                 Age <input type="number" name="age" id="ageField" min="18" max="100" size="3" placeholder="18+" > 
-                            </th>
+                            </td>
                         </tr>
                         
                         <tr>				
                             <td>
                                 Weight <input type="number" name="weight" id="weightField"  min="0" max="300" size="3" placeholder="KG"  >
                             </td>
+                        </tr>
+                        <tr>
                             <td> 
                                 Height <input type="number" name="height" id="heightField"  min="0" max="300" size="3" placeholder="cm" >
                             </td>					
                         </tr>                        
                     </table>                  
-                    <input type="Reset" value="Clear">                    
+                    <input type="Reset" value="Clear" class = 'resetButton'>                    
                 </form>
                 <button id="project2Button" class="answerButton"> Check Answer </button>
             </div>
             
             <br>
+            
+            <br>
+            
+
             <p id="projectAnswer">                 
             </p>
+
+            <br>
+            <br>
 
             
         </div>

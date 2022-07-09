@@ -34,6 +34,7 @@ projects.forEach(p => {
     p.onmouseup = function(){
         p.style.margin = '2rem'
         p.style.boxShadow = '0.5rem 0.5rem 1rem 0.2rem lightgray';
+        projectAnswer.style.border = '0px solid red';
     }
 
     p.onmouseleave = function(){

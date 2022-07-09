@@ -109,12 +109,14 @@ h2 {
 
 p {
     margin: 0;
-    padding: 1rem;
+    padding: 3rem;
+    line-height: 1.8rem;
 }
 
 nav a {
     text-decoration: none;
     padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 2px rgb(236, 236, 236) solid;
     border-radius: 1rem;
     color: black;
 
@@ -208,8 +210,8 @@ td {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 3rem 0rem 3rem 0rem;
-    margin: 5rem 0 0 0;
+    padding: 3rem 0rem 5rem 0rem;
+    margin: 5rem 0 5rem 0;
 }
 
 #quote1 h2 {
@@ -303,7 +305,7 @@ td {
     padding: 2.5rem;
     border-radius: 3rem;
     font-size: 1.2rem;
-    margin: 4rem;
+    margin: 4rem 4rem 20rem 4rem;
 }
 
 
@@ -438,10 +440,10 @@ td {
 
     #projectsExpanded {
         background-color: rgb(243, 243, 243);
-        padding: 4rem;
+        padding: 1rem;
         border-radius: 0rem;
         font-size: 1.2rem;
-        margin: 5rem 0 0 0;
+        margin: 5rem 0 5rem 0;
     }
 
    

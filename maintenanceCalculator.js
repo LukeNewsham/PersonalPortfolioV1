@@ -10,6 +10,8 @@ function mBCalculation() {
 	height = document.getElementById("heightField").value;
 
 	if (sex != "" && age > 0 && weight > 0 && height > 0) {
+
+		projectAnswerElement.style.border = '0px solid red';
 		
 			
 		console.log(sex, age, weight, height);
@@ -34,8 +36,11 @@ function mBCalculation() {
         console.log(baseMetabolicRate);
 		//Displays answer in HTML 
 		projectAnswerElement.innerHTML = "Your Basic Metabolic Rate (BMR) is  " + Math.round(baseMetabolicRate) + ".";
+
+		
         
 	} else {
+		projectAnswerElement.style.border = '2px solid red';
         projectAnswerElement.innerHTML = "Please fill in all fields";
     }
 }

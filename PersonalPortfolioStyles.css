@@ -196,7 +196,7 @@ td {
     min-width: 30rem;
     margin: auto;
     justify-items: stretch;
-    /* Below dosent work for some reason? Could need an external div for it to position into? */
+    /* Below doesn't work for some reason? Could need an external div for it to position into? */
     justify-content: space-around;
     align-items: stretch;
     align-content: stretch;

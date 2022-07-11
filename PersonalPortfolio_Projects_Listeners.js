@@ -4,6 +4,8 @@ const project2 = document.getElementById('project2');
 const project3 = document.getElementById('project3');
 const projects = [project1, project2, project3];
 
+const projectsExpanded = document.getElementById('projectsExpanded')
+
 
 const project1Info = document.getElementById('project1Info');
 const project2Info = document.getElementById('project2Info');
@@ -71,18 +73,36 @@ function projectClick(){
     this.style.backgroundColor = 'darkblue';
     this.style.color = 'white';
 
+    //removes project1 image if created
+    if (projectsExpanded.querySelector('#luhnAlgorithm') !== null) {
+        const luhnImage = document.getElementById('luhnAlgorithm');
+        projectsExpanded.removeChild(luhnImage);
+    }
+
     //adds and updates DOM elements for clicked project buttons
     if (this == project1) {
-        projectDescription.innerHTML = 'The company that you work for suspects that credit card distributors have been mailing out cards that have invalid numbers. In this project, you have the role of a clerk who checks if credit cards are valid. Every other clerk currently checks using pencil and paper, but you’ll be optimizing the verification process using your knowledge of functions and loops to handle multiple credit cards at a time. Unlike the other clerks, you can spend the rest of your time relaxing!';
+
+        var luhnImage = document.createElement('img');
+
+        if (projectsExpanded.querySelector('#luhnAlgorithm') === null) {        
+        projectsExpanded.appendChild(luhnImage);
+        luhnImage.setAttribute('src', './Luhn Algorithm.jpg')
+        luhnImage.setAttribute('id', 'luhnAlgorithm')
+    
+        }    
+        
+        projectDescription.innerHTML = 'Please input a 16 digit number below to validate with Luhn Algorithm:';
         project1Info.style.display = 'inline';
         projectAnswer.style.display = 'inline';
     }
-    if (this == project2) {
+
+    if (this == project2) {        
         projectDescription.innerHTML = " ";
         project2Info.style.display = 'inline';
         projectAnswer.style.display = 'inline';
 
     }
+
     if (this == project3) {
         projectDescription.innerHTML = " ";
         project3Info.style.display = 'inline';

@@ -4,7 +4,7 @@
 
 html {
     font-size: 14px;
-    font-family: 'Century Gothic Light';
+    font-family: 'Comfortaa';
 }
 
 
@@ -308,6 +308,13 @@ td {
     margin: 4rem 4rem 20rem 4rem;
 }
 
+#luhnAlgorithm {
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
 
 
 
@@ -460,4 +467,14 @@ td {
         text-align: center;
         
     }
+
+    #projectAnswer {
+        font-size: 1rem;
+        margin: 3rem;
+    }
+
+    p {
+        padding: 0.5rem;
+    }
+    
 }
